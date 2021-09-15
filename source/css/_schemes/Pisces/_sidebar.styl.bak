@@ -7,20 +7,8 @@
   width: $sidebar-desktop;
 
   +tablet-mobile() {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0 - $sidebar-desktop;
-    z-index: $zindex-2;
-    height: 100vh;
-    margin-top: 0;
-    background-color: var(--content-bg-color);
-    transition: right 0.4s;
+    display: none;
   }
-
-  .sidebar-active & {
-      right: 0;
-   }
 
   if (hexo-config('motion.enable') and hexo-config('motion.transition.sidebar')) {
     visibility: hidden;
@@ -29,12 +17,6 @@
 
 .sidebar-toggle {
   display: none;
-
-  +tablet-mobile() {
-    display: block;
-    bottom: 80px;
-  }
-
 }
 
 .sidebar-inner {
@@ -43,11 +25,6 @@
   box-shadow: $box-shadow;
   box-sizing: border-box;
   color: var(--text-color);
-  
-  +tablet-moblie() {
-    max-height: 100vh;
-  }
-
 }
 
 .site-state-item {

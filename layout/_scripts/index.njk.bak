@@ -18,7 +18,3 @@
 {%- if theme.pjax %}
   {{- next_js('pjax.js') }}
 {%- endif %}
-
-{%- if theme.scheme === 'Pisces' %}
-  {{- next_js('schemes/pisces.js') }}
-{%- endif %}
